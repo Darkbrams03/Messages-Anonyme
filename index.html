@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages Anonymes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body>
+
+<div class="container" id="app">
+    <div id="step1" class="fade-in">
+        <h2>Coucou !</h2>
+        <p>Ceci est un nouveau concept de ngl link, dis-nous comment tu t'appelles.</p>
+        <input type="text" id="prenomInput" placeholder="Ton prénom..." autocomplete="off">
+        <button onclick="goToQuestion()">Continuer</button>
+    </div>
+
+    <div id="step2" class="hidden fade-in">
+        <h2 id="displayPrenom"></h2>
+       
+        <div style="background: #fffafa; padding: 15px; border-radius: 10px; border: 1px dashed var(--primary-color); margin-bottom: 15px;">
+            <strong id="questionText">Envoi un message anonyme à Bram's</strong>
+        </div>
+        <input type="text" id="reponseInput" placeholder="Ta réponse..." autocomplete="off">
+        <button id="sendBtn" onclick="submitFinal()">Envoyer anonymement</button>
+    </div>
+
+    <div id="step3" class="hidden fade-in">
+        <h2 style="color: #2ed573;">Envoyé ! </h2>
+        <p>Merci pour ta participation. Ton message est bien arrivé dans la boîte anonyme.</p>
+        <button onclick="location.reload()" style="background: var(--secondary-color); margin-top: 10px;">Rejouer</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
